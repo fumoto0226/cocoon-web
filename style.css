@@ -1,0 +1,185 @@
+.home-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #353535;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home-page .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: transform 0.1s ease-out;
+  transform-origin: center;
+}
+/* title */
+.home-page .title-wrapper {
+  position: absolute;
+  width: 71.8vw;
+  height: 15.6vh;
+  top: 40.2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.home-page .title {
+  position: relative;
+  font-family: "Bowlby One", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 5.2vw;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .title2 {
+  position: relative;
+  font-family: "Bowlby One", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 2.3vw;
+  letter-spacing: 0;
+  line-height: normal;
+}
+/* address */
+
+.home-page .address-wrapper {
+  position: absolute;
+  width: 29.9vw;
+  height: 5.1vh;
+  top: 82.3vh;
+  left: 34.1vw;
+  background-color: #070a31be;
+  border-radius: 2.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page .address-wrapper2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.home-page .vector-address {
+  position: relative;
+  width: 1.6vw;
+  height: 3.2vh;
+}
+
+.home-page .text-address {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 0.9vw;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+.home-page .arrow-wrapper {
+  position: absolute;
+  width: 10.6vh;
+  height: 10.6vh;
+  top: 17.4vh;
+  left: 26vw;
+  background-color: #ff47e6;
+  border-radius: 50%;
+  transform: rotate(-19.69deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page .arrow {
+  position: relative;
+  width: 5.2vh;
+  height: 5.2vh;
+  transform: rotate(19.69deg);
+}
+
+.home-page .mask-group-wrapper {
+  position: absolute;
+  width: 39.1vw;
+  height: 51.1vh;
+  top: 44.7vh;
+  left: 64.5vw;
+}
+
+.home-page .mask-group {
+  position: absolute;
+  width: 35.5vw;
+  height: 51vh;
+  top: -3.5vh;
+  left: 0;
+}
+
+/* 定义渐变动画 */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-page .header {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  /* 修改这里的颜色值来改变渐变色 */
+  background: linear-gradient(
+    90deg,
+    #1a2c7f,  /* 深蓝色 */
+    #3340b6,  /* 中蓝色 */
+    #1e4bb4,  /* 海洋绿 */
+    #3340b6,  /* 中蓝色 */
+    #1a2c7f   /* 深蓝色 */
+  );
+  background-size: 200% 100%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
