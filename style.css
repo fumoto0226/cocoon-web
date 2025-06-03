@@ -61,17 +61,50 @@
 }
 /* address */
 
+/* 定义边框流光动画 */
+@keyframes borderShine {
+  0% {
+    border-color: rgb(72, 240, 255);
+  }
+  33% {
+    border-color: rgb(255, 255, 255);
+  }
+  66% {
+    border-color: rgb(255, 92, 230);
+  }
+  100% {
+    border-color: rgb(72, 240, 255);
+  }
+}
+/* 定义文字流光动画 */
+@keyframes textShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .home-page .address-wrapper {
   position: absolute;
-  width: 29.9vw;
-  height: 5.1vh;
-  top: 82.3vh;
-  left: 34.1vw;
-  background-color: #070a31be;
-  border-radius: 2.1vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 11%;
+  width: 31%;
+  background: rgba(7, 27, 78, 0.791);
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  border: 1.5px solid rgb(72, 133, 255);
+  transition: all 0.3s ease; /* 控制整体变化速度 */
+}
+
+/* 悬浮效果 */
+.home-page .address-wrapper:hover {
+  transform: translateX(-50%) scale(1.05); /* 控制放大比例 */
+  background: rgb(5, 37, 167); /* 控制悬浮时的背景色 */
+  animation: borderShine 2s linear infinite; /* 控制边框流光速度 */
 }
 
 .home-page .address-wrapper2 {
@@ -99,6 +132,22 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
+  /* background: linear-gradient(
+    90deg,
+    #ffffff 10%,
+    #c2ffe4 50%,
+    #ffffff 100%
+  );
+  background-size: 50% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 6s linear infinite; */
+}
+
+/* 悬浮时文字流光速度变化 */
+.home-page .address-wrapper:hover .text-address {
+  animation: textShine 1.5s linear infinite; /* 控制悬浮时文字流光速度 */
 }
 
 .home-page .arrow-wrapper {
@@ -107,7 +156,7 @@
   height: 10.6vh;
   top: 17.4vh;
   left: 26vw;
-  background-color: #ff47e6;
+  background-color: #47ff4a00;
   border-radius: 50%;
   transform: rotate(-19.69deg);
   display: flex;
@@ -117,8 +166,8 @@
 
 .home-page .arrow {
   position: relative;
-  width: 5.2vh;
-  height: 5.2vh;
+  width: 10.6vh;
+  height: 10.6vh;
   transform: rotate(19.69deg);
 }
 
