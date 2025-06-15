@@ -24,3 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
         background.style.transform = 'translate(0, 0)';
     });
 }); 
+

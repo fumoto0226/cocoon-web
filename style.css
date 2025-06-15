@@ -26,6 +26,9 @@
   transition: transform 0.1s ease-out;
   transform-origin: center;
 }
+
+
+
 /* title */
 .home-page .title-wrapper {
   position: absolute;
@@ -171,6 +174,22 @@
   transform: rotate(19.69deg);
 }
 
+/* 箭头动画 */
+.arrow {
+  transition: transform 0.3s ease-in-out;
+}
+.arrow:hover {
+  animation: arrowWobble 0.5s ease-in-out forwards; /* 控制动画速度 */
+}
+@keyframes arrowWobble {
+  0%,100% { transform: rotate(176deg); }
+  20% { transform: rotate(180deg); }
+  40% { transform: rotate(150deg); }
+  60% { transform: rotate(185deg); }
+  80% { transform: rotate(170deg); }
+}
+
+/* ----- */
 .home-page .mask-group-wrapper {
   position: absolute;
   width: 39.1vw;
